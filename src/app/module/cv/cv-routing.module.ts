@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CvComponent } from './cv.component';
 
 const routes: Routes = [
   {
-    path: 'cv',
-    loadChildren: () => import('./module/cv/cv.module').then((m) => m.CvModule),
+    path: 'view',
+    component: CvComponent,
   },
   {
     path: '**',
-    redirectTo: 'cv',
+    redirectTo: 'view',
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class CvRoutingModule {}

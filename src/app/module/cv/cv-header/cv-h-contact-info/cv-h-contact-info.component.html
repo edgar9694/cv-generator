@@ -1,0 +1,6 @@
+<app-cv-h-contact-info-edit
+  *ngIf="editForm; else viewForm"
+></app-cv-h-contact-info-edit>
+<ng-template #viewForm>
+  <app-cv-h-contact-info-view></app-cv-h-contact-info-view>
+</ng-template>

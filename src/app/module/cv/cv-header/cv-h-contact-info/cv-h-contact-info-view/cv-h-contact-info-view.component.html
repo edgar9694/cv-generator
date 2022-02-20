@@ -1,0 +1,39 @@
+<div class="d-flex flex-column">
+  <p class="h2 py-2 text-center">{{ contactInfoObj.name }}</p>
+  <div class="d-flex flex-row">
+    <div class="d-flex flex-column w-75">
+      <p>
+        <fa-icon [icon]="faGithub"></fa-icon>
+        <span class="ps-3">
+          {{ contactInfoObj.github }}
+        </span>
+      </p>
+      <p>
+        <fa-icon [icon]="faLinkedin"></fa-icon>
+        <span class="ps-3">
+          {{ contactInfoObj.linkedin }}
+        </span>
+      </p>
+      <p>
+        <fa-icon [icon]="faLocationDot"></fa-icon>
+        <span class="ps-3">
+          {{ contactInfoObj.location }}
+        </span>
+      </p>
+    </div>
+    <div class="d-flex flex-column w-25">
+      <div class="d-flex">
+        <fa-icon [icon]="faAt"></fa-icon>
+        <div class="ps-3 d-flex flex-column">
+          <span *ngFor="let email of contactInfoObj.emails">{{ email }}</span>
+        </div>
+      </div>
+      <div class="d-flex mt-2">
+        <fa-icon [icon]="faPhone"></fa-icon>
+        <div class="ps-3 d-flex flex-column">
+          <span *ngFor="let phone of contactInfoObj.phones">{{ phone }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
