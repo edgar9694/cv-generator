@@ -7,7 +7,7 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./cv-h-contact-info.component.scss'],
 })
 export class CvHContactInfoComponent {
-  editForm: boolean = false;
+  editForm: boolean = true;
 
   constructor() {}
 }
